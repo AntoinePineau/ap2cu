@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="letters.nb">Nombre de lettres</string>
+    <string name="app_name">Les Chiffres et les Lettres</string>
+<string name="letters.nb_of">Nombre de </string>
+<string name="letters.nb_points">Nombre de points par lettre</string>
+<string name="letters.name">Le Mot le Plus Long</string>
+</resources>

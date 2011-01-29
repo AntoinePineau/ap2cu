@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item format="integer" type="string" name="nb_points_par_lettre">1</item>
+    <item format="integer" type="string" name="nb_A">8</item>
+    <item format="integer" type="string" name="nb_B">4</item>
+    <item format="integer" type="string" name="nb_C">4</item>
+    <item format="integer" type="string" name="nb_D">4</item>
+    <item format="integer" type="string" name="nb_E">13</item>
+    <item format="integer" type="string" name="nb_F">4</item>
+    <item format="integer" type="string" name="nb_G">4</item>
+    <item format="integer" type="string" name="nb_H">4</item>
+    <item format="integer" type="string" name="nb_I">6</item>
+    <item format="integer" type="string" name="nb_J">1</item>
+    <item format="integer" type="string" name="nb_K">1</item>
+    <item format="integer" type="string" name="nb_L">6</item>
+    <item format="integer" type="string" name="nb_M">4</item>
+    <item format="integer" type="string" name="nb_N">6</item>
+    <item format="integer" type="string" name="nb_O">6</item>
+    <item format="integer" type="string" name="nb_P">3</item>
+    <item format="integer" type="string" name="nb_Q">1</item>
+    <item format="integer" type="string" name="nb_R">6</item>
+    <item format="integer" type="string" name="nb_S">7</item>
+    <item format="integer" type="string" name="nb_T">6</item>
+    <item format="integer" type="string" name="nb_U">6</item>
+    <item format="integer" type="string" name="nb_V">2</item>
+    <item format="integer" type="string" name="nb_W">1</item>
+    <item format="integer" type="string" name="nb_X">1</item>
+    <item format="integer" type="string" name="nb_Y">1</item>
+    <item format="integer" type="string" name="nb_Z">1</item>
+
+</resources>
