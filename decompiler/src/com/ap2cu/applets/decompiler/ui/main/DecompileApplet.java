@@ -48,8 +48,8 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
 
   final JTextField jarFileField = new JTextField(60);
 
-  public static final int PREFERRED_WIN_WIDTH = 600;
-  public static final int PREFERRED_WIN_HEIGHT = 250;
+  public static final int PREFERRED_WIN_WIDTH = 800;
+  public static final int PREFERRED_WIN_HEIGHT = 300;
 
   public DecompileApplet() {
     Dimension size = new Dimension(PREFERRED_WIN_WIDTH, PREFERRED_WIN_HEIGHT);
@@ -57,12 +57,6 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
     setMinimumSize(size);
     new FileDrop(this, this);
     render();
-  }
-
-  @Override
-  public void paint(Graphics g) {
-    // TODO Auto-generated method stub
-    super.paint(g);
   }
 
   private void buildInterface() {
@@ -104,7 +98,7 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
     appendToLog("Unjaring " + path);
     File zip = decompileJar(path, index);
     if (zip != null) {
-      appendToLog("Opening " + path);
+      appendToLog("Opening " + zip.getAbsolutePath());
       DesktopUtils.openFile(zip);
     }
   }
