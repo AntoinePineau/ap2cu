@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jnlp spec="1.0+" codebase="http://ap2cu.com/tools/decompiler" href="ap2cu.jnlp">
+  <information>
+    <title>AP2cu Decompiler Applet</title>
+    <vendor>Antoine PINEAU</vendor>
+    <!--homepage href="http://ap2cu.com/tools/decompiler"/>
+    <description>SwingSet2 Demo Application</description>
+    <description kind="short">A demo of the capabilities 
+    of the Swing Graphical User Interface.</description>
+    <icon href="/tools/decompilerterre.jpg"/>
+    <icon kind="splash" href="/tools/decompilersoleil.jpg"/>
+    <offline-allowed/> 
+    <shortcut online="true">
+      <desktop/>
+      <menu submenu="My Corporation Apps"/>
+    </shortcut-->
+  </information>
+  <resources>
+    <j2se version="1.6+" />
+    <jar href="jdec-30.jar" version="3.0" main="true" />
+  </resources>
+  <applet-desc name="decompiler" main-class="com.ap2cu.applets.decompiler.ui.main.DecompileApplet" width="700" height="300" />
+  <update check="background" />
+</jnlp>
