@@ -30,7 +30,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Lshr;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Lsub;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Lushr;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Lxor;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

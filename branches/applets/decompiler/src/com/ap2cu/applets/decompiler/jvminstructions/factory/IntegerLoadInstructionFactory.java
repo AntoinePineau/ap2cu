@@ -46,7 +46,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Ixor;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.L2I;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Saload;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Sipush;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

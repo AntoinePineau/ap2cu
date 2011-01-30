@@ -10,7 +10,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Fstore_1;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Fstore_2;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Fstore_3;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.IInstructionCommandHolder;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

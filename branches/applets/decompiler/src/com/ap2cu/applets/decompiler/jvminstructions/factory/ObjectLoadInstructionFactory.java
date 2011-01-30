@@ -18,7 +18,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.IInstructionC
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Multianewarray;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.New;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.NewArray;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

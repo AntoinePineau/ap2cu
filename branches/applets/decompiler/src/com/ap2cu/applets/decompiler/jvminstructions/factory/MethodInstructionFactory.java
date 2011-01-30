@@ -8,7 +8,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.InvokeInterfa
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.InvokeSpecial;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.InvokeStatic;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.InvokeVirtual;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

@@ -28,7 +28,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Dupx2;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.F2d;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.IInstructionCommandHolder;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.L2d;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

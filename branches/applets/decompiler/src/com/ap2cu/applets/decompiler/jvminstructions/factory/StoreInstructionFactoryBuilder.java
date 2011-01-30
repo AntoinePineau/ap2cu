@@ -3,8 +3,8 @@ package com.ap2cu.applets.decompiler.jvminstructions.factory;
 
 import java.util.Map;
 
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstructionHelper;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstructionHelper;
 
 /*
 *  StoreInstructionFactoryBuilder.java Copyright (c) 2006,07 Swaroop Belur

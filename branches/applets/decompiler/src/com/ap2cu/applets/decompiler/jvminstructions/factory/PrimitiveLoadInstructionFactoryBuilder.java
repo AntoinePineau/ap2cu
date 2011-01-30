@@ -3,7 +3,7 @@ package com.ap2cu.applets.decompiler.jvminstructions.factory;
 
 import java.util.Map;
 
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 /*
 *  PrimitiveLoadInstructionFactoryBuilder.java Copyright (c) 2006,07 Swaroop Belur

@@ -13,7 +13,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Istore1;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Istore2;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Istore3;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Sastore;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*

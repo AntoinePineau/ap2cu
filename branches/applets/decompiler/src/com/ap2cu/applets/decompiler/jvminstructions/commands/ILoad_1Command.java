@@ -3,7 +3,7 @@ package com.ap2cu.applets.decompiler.jvminstructions.commands;
 import com.ap2cu.applets.decompiler.core.DecompilerHelper;
 import com.ap2cu.applets.decompiler.core.LocalVariable;
 import com.ap2cu.applets.decompiler.core.Operand;
-import com.ap2cu.applets.decompiler.jvminstructions.util.TypeConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.TypeConstants;
 import com.ap2cu.applets.decompiler.reflection.Behaviour;
 
 /*
