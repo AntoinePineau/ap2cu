@@ -2549,11 +2549,11 @@ public class ConsoleLauncher {
           String JarDir = Configuration.getTempDir();
           File f = new File(JarDir);
           if (f.exists() == false) {
-            Writer w = Writer.getWriter("log");
-            w.writeLog("Temp Dir Does Not Exist...");
-            w.writeLog("Jdec will not create The Directory " + JarDir);
-            w.flush();
-            w.close();
+//            Writer w = Writer.getWriter("log");
+//            w.writeLog("Temp Dir Does Not Exist...");
+//            w.writeLog("Jdec will not create The Directory " + JarDir);
+//            w.flush();
+//            w.close();
             f.mkdirs();
           }
           int slash = name.lastIndexOf("/");

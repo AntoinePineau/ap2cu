@@ -122,12 +122,17 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
   public static File decompileJar(final String jarFile, int i) {
     String id = System.currentTimeMillis() + "" + i;
     File sourceZipFile = new File(jarFile.replaceAll("^(.*)\\.jar$", "$1_src.zip"));
-    String bin = "bin" + id;
-    String src = "src" + id;
+    String bin = "/AppData/Local/Java/Applets/Decompiler/bin" + id;
+    String src = "/AppData/Local/Java/Applets/Decompiler/src" + id;
 
-    File binFolder = new File(bin);
-    File srcFolder = new File(src);
+    File userHome = new File(System.getProperty("user.home"));
+    
+    File binFolder = new File(userHome, bin);
+    File srcFolder = new File(userHome, src);
 
+    System.out.println("binFolder : "+binFolder.getAbsolutePath());
+    System.out.println("srcFolder : "+srcFolder.getAbsolutePath());
+    
     if (!binFolder.exists())
       binFolder.mkdirs();
     if (!srcFolder.exists())
