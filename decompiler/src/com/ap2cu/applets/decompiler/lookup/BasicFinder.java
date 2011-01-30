@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import com.ap2cu.applets.decompiler.core.GlobalVariableStore;
 import com.ap2cu.applets.decompiler.core.JvmOpCodes;
 import com.ap2cu.applets.decompiler.exceptions.ApplicationException;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 import com.ap2cu.applets.decompiler.reflection.Behaviour;
 import com.ap2cu.applets.decompiler.util.ExecutionState;
 

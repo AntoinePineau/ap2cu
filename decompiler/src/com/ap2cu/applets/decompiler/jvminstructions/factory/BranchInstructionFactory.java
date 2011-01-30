@@ -36,7 +36,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.MonitorExit;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Ret;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Return;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.TableSwitch;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 public class BranchInstructionFactory implements IInstructionFactory {

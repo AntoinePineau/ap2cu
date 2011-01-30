@@ -16,7 +16,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Pop2;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.PutField;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Putstatic;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Swap;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 /*
 *  UnclassfiedInstructionFactory.java Copyright (c) 2006,07 Swaroop Belur

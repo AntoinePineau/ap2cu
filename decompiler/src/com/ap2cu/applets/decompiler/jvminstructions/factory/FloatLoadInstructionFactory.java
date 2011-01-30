@@ -23,7 +23,7 @@ import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Frem;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.Fsub;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.IInstructionCommandHolder;
 import com.ap2cu.applets.decompiler.jvminstructions.commandholders.L2f;
-import com.ap2cu.applets.decompiler.jvminstructions.util.InstrConstants;
+import com.ap2cu.applets.decompiler.jvminstructions.utils.InstrConstants;
 
 
 /*
