@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!-- ======================================================================
+     Subtitles build file
+
+     Antoine PINEAU
+     ====================================================================== -->
+<project name="DecompilerApplet" default="SignJar" basedir=".">
+	<description>
+    Create a jar
+  </description>
+
+	<!-- =================================
+          I N I T I A L I Z A T I O N
+         ================================= -->
+	<target name="Init" description="Initialize attributes">
+    <property name="MainClass" value="net.sf.jdec.ui.main.UILauncher" />
+		<property name="JarFile" value="${basedir}/dist/jdec-30.jar" />
+		<property name="src" value="${basedir}/src" />
+		<property name="bin" value="${basedir}/classes" />
+    <delete dir="${bin}"/>
+    <mkdir dir="${bin}"/>
+    <property name="KeyStore" value="AP2cuKeyStore" />
+    <property name="Alias" value="AP2cu-Applets" />
+    <property name="Password" value="AP2cu1982" />
+    <property name="ValidityDays" value="365" />
+	</target>
+
+
+	<!-- =================================
+          C O M P I L A T I O N
+         ================================= -->
+	<target name="Compile" description="Compile sources" depends="Init">
+		<javac srcdir="${src}" destdir="${bin}" debug="on" encoding="UTF-8" source="1.6" />
+	</target>
+
+
+	<!-- =================================
+          J A R - A R C H I V E
+         ================================= -->
+	<target name="Jar" description="Create a signed jar" depends="Compile">
+		<jar destfile="${JarFile}" basedir="${bin}">
+			<manifest>
+				<attribute name="Built-By" value="Antoine PINEAU" />
+				<attribute name="Main-Class" value="${MainClass}" />
+			</manifest>
+		</jar>
+	</target>
+
+  <!-- =================================
+          S I G N - J A R
+         ================================= -->
+  <target name="SignJar" description="Sign the Jar file" depends="Jar">
+    <delete file="${KeyStore}" />
+    <genkey alias="${Alias}" storepass="${Password}" keystore="${KeyStore}" validity="${ValidityDays}">
+      <dname>
+        <param name="CN" value="Antoine PINEAU" />
+        <param name="OU" value="AP2cu" />
+        <param name="O" value="ap2cu.com" />
+        <param name="C" value="FR" />
+      </dname>
+    </genkey>
+    <signjar jar="${JarFile}" alias="${Alias}" storepass="${Password}" keystore="${KeyStore}" />
+  </target>
+
+
+</project>
