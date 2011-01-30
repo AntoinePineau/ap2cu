@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Jar decompiler</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<link type='text/css' href='/res/css/common.css' rel='stylesheet' />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript" src="http://ap2cu.com/res/js/stat.js"></script>
+</head>
+<body>
+<script src="http://www.java.com/js/deployJava.js"></script>
+
+<h1>Jar Decompiler</h1>
+
+<h3>You give jar file(s), you get a .zip file containing all your Java classes!</h3>
+<h4><u>How to use it</u>:<br />
+<ol>
+  <li>You can browse for a .jar file</li>
+  <li>Or you can Drag and Drop .jar file(s) to the applet</li>
+</ol>
+<u>For each <i>&lt;path/to/the/java/archive&gt;.jar</i> file</u>:
+<ol>
+  <li>The .zip file containing the decompiled .java files is automatically saved to <i>&lt;path/to/the/java/archive<b>_src</b>&gt;.<b>zip</b></i></li>
+  <li>The .zip file is automatically opened with your favorite editor if any</li>
+</ol>
+</h4>
+<script>
+  var attributes = {
+    id : 'dec',
+    code : 'com.ap2cu.applets.decompiler.ui.main.DecompileApplet',
+    width : 700,
+    height : 300
+  };
+  var parameters = {
+    jnlp_href : 'http://ap2cu.com/tools/decompiler/ap2cu.jnlp'
+  };
+  deployJava.runApplet(attributes, parameters, '1.6');
+</script>
+</body>
+</html>
+
