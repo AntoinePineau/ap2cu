@@ -131,7 +131,7 @@ public class Configuration {
        {
            System.out.println("ResourceBundle File Not Found");
            System.out.println("Please enter a valid path for config.properties file in the script used to Run Jdec");
-           System.exit(1);
+//           System.exit(1);
        }
       try
        {
