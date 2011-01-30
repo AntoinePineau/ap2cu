@@ -250,7 +250,7 @@ public class ConsoleLauncher {
         handler.reportException();
         System.out.println("[ERROR] Please check the input settings to Jdec again");
         System.out.println("Please check the log output for more details");
-        System.exit(1);
+        //System.exit(1);
       }
 
       // path=checkFilePath(path);
@@ -262,7 +262,7 @@ public class ConsoleLauncher {
         System.out.println("Input Path specified by user :" + path + "\n");
         System.out.println("[ERROR] Please check the input settings to Jdec again");
         System.out.println("Please check the log output for more details");
-        System.exit(1);
+        //System.exit(1);
       }
       else {
         // Register ClassPath in Configuration Class For Retrieveing
@@ -288,7 +288,7 @@ public class ConsoleLauncher {
             h1.reportException();
             System.out.println("Exception occured while decompiling class");
             System.out.println("Please check the log output for more details");
-            System.exit(1);
+            //System.exit(1);
           }
 
           currentDepthLevel = 0;
@@ -460,7 +460,7 @@ public class ConsoleLauncher {
         else {
           AllExceptionHandler handler = new AllExceptionHandler("Invalid Option passed to jdec...\nPlease set jdec_option as help and execute ....");
           handler.sendMessage();
-          System.exit(1);
+          //System.exit(1);
         }
 
       }
@@ -584,7 +584,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        System.exit(1);
+        //System.exit(1);
       }
 
     }
@@ -628,7 +628,7 @@ public class ConsoleLauncher {
         }
         else {
           System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-          System.exit(1);
+          //System.exit(1);
         }
       }
       processClassFile(readerStream);
@@ -755,7 +755,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. jdec will now exit..");
-        System.exit(1);
+        //System.exit(1);
       }
     }
     catch (Exception exp) {
@@ -776,7 +776,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        System.exit(1);
+        //System.exit(1);
       }
 
     }
@@ -1247,7 +1247,7 @@ public class ConsoleLauncher {
       handler.reportException();
       JFrame mainFrame = UILauncher.getMainFrame();
       if (mainFrame == null) {
-        System.exit(1);
+        //System.exit(1);
       }
     }
     return CPool.returnConstantPoolDesc();
@@ -1313,7 +1313,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        System.exit(1);
+        //System.exit(1);
       }
     }
   }
@@ -2211,7 +2211,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        System.exit(1);
+        //System.exit(1);
       }
     }
 
@@ -3667,7 +3667,7 @@ public class ConsoleLauncher {
       handler.sendMessage();
       System.out.println("[ERROR] Please check the input settings to Jdec again");
       System.out.println("Please check the log output for more details");
-      System.exit(1);
+      //System.exit(1);
     }
 
   }

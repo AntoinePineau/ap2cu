@@ -46,9 +46,9 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
 
   private static JEditorPane logArea = new JEditorPane();
 
-  final JTextField jarFileField = new JTextField(60);
+  final JTextField jarFileField = new JTextField(72);
 
-  public static final int PREFERRED_WIN_WIDTH = 800;
+  public static final int PREFERRED_WIN_WIDTH = 700;
   public static final int PREFERRED_WIN_HEIGHT = 300;
 
   public DecompileApplet() {

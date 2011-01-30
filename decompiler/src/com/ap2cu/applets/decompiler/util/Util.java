@@ -148,7 +148,7 @@ public class Util {
 				writer.writeLog(" ---> 1> Type -help as the argument\n\n");
 				writer.flush();
 				Thread.sleep(5000);
-				System.exit(1);
+//				System.exit(1);
 			} catch (InterruptedException ie) {
 				// Leave Blank
 			}
