@@ -259,7 +259,7 @@ public class DecompileApplet extends JApplet implements WindowListener, FileDrop
 
     public boolean accept(File file) {
       if (file.isDirectory()) {
-        return false;
+        return true;
       }
       String fileName = file.getName().toLowerCase();
 

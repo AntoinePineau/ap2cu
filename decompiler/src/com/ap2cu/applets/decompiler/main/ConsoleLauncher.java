@@ -87,7 +87,6 @@ import com.ap2cu.applets.decompiler.util.ClassStructure;
 import com.ap2cu.applets.decompiler.util.Constants;
 import com.ap2cu.applets.decompiler.util.Util;
 
-
 // import org.bb.projects.jdec.ui.core.JarTree;
 
 /**
@@ -250,7 +249,7 @@ public class ConsoleLauncher {
         handler.reportException();
         System.out.println("[ERROR] Please check the input settings to Jdec again");
         System.out.println("Please check the log output for more details");
-        //System.exit(1);
+        // System.exit(1);
       }
 
       // path=checkFilePath(path);
@@ -262,7 +261,7 @@ public class ConsoleLauncher {
         System.out.println("Input Path specified by user :" + path + "\n");
         System.out.println("[ERROR] Please check the input settings to Jdec again");
         System.out.println("Please check the log output for more details");
-        //System.exit(1);
+        // System.exit(1);
       }
       else {
         // Register ClassPath in Configuration Class For Retrieveing
@@ -288,7 +287,7 @@ public class ConsoleLauncher {
             h1.reportException();
             System.out.println("Exception occured while decompiling class");
             System.out.println("Please check the log output for more details");
-            //System.exit(1);
+            // System.exit(1);
           }
 
           currentDepthLevel = 0;
@@ -460,7 +459,7 @@ public class ConsoleLauncher {
         else {
           AllExceptionHandler handler = new AllExceptionHandler("Invalid Option passed to jdec...\nPlease set jdec_option as help and execute ....");
           handler.sendMessage();
-          //System.exit(1);
+          // System.exit(1);
         }
 
       }
@@ -584,7 +583,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        //System.exit(1);
+        // System.exit(1);
       }
 
     }
@@ -628,7 +627,7 @@ public class ConsoleLauncher {
         }
         else {
           System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-          //System.exit(1);
+          // System.exit(1);
         }
       }
       processClassFile(readerStream);
@@ -644,7 +643,6 @@ public class ConsoleLauncher {
   public static java.lang.String decompileClass(String path) throws Exception {
     return decompileClassAndZip(path, null);
   }
-  
 
   public static java.lang.String decompileClassAndZip(String path, ZipOutputStream zip) throws Exception {
     UIUtil.codeReformatted = false;
@@ -652,9 +650,16 @@ public class ConsoleLauncher {
     java.lang.String classDesc = "";
     boolean notinner = false;
     try {
-      InputStream readerStream = VerifyClassFile(path);
+      InputStream readerStream = null;
+      try {
+        readerStream = VerifyClassFile(path);
+      }
+      catch (Exception e) {
+        System.err.println(e.getMessage());
+        return null;
+      }
       ClassDescription cd = processClassFile(readerStream);
-      if(zip!=null)
+      if (zip != null)
         new File(path).delete();
       // Skip Decompiling This Class ???
       /**
@@ -721,42 +726,12 @@ public class ConsoleLauncher {
       if (op.exists() == false)
         op.mkdirs();
       Configuration.setOutputFolderPath(op.getAbsolutePath());
-      
+
       classDesc = zip == null ? displayClass(true, "dc", cd.getClassName()) : displayClassAndZip(true, "dc", cd.getClassName(), zip);
       classDesc = classDesc.replaceAll("this\\$", "This\\$");
       classDesc = classDesc.replaceAll("this$", "This$");
       node.setHasBeenDecompiled(true);
 
-    }
-    catch (MalFormedClassException mfe) {
-      currentdecompiledtext = "";
-      AllExceptionHandler handler = new AllExceptionHandler(mfe);
-      handler.reportException();
-      JFrame mainFrame = UILauncher.getMainFrame();
-      if (mainFrame != null) {
-
-        if (Configuration.getDecompileroption().equals("jar") == false && Configuration.getDecompileroption().equals("decompileJar") == false) {
-          Manager.getManager().setShowProgressBar(false);
-          java.lang.String msg = "Unsupported Class Specified As Input To Jdec..\n";
-          msg += mfe.getMessage() + "\n";
-          JOptionPane.showMessageDialog(UILauncher.getMainFrame(), msg, "Run Jdec Decompiler", JOptionPane.ERROR_MESSAGE);
-          try {
-            UIManager.setLookAndFeel(UILauncher.getUIutil().getCurrentLNF());
-            SwingUtilities.updateComponentTreeUI(UILauncher.getMainFrame());
-          }
-          catch (Exception e) {
-
-          }
-          throw new RuntimeException("Unsupported Class Version found..Current task will now stop");
-        }
-        if (Configuration.getDecompileroption().equals("jar") || Configuration.getDecompileroption().equals("decompileJar")) {
-          throw mfe;
-        }
-      }
-      else {
-        System.out.println("Jdec encountered an FatalException. jdec will now exit..");
-        //System.exit(1);
-      }
     }
     catch (Exception exp) {
       currentdecompiledtext = "";
@@ -776,7 +751,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        //System.exit(1);
+        // System.exit(1);
       }
 
     }
@@ -1008,11 +983,12 @@ public class ConsoleLauncher {
 
       magic = dis.readInt();
       // LOG the Magic Number of the Class...
-//      Writer logwriter = Writer.getWriter("log");
-//      String classname = getClassName(path);
-//      logwriter.writeLog("[INFO]Magic Number of the Class \"" + classname + "\" Is " + new String(Integer.toHexString(magic)).toUpperCase());
-//      logwriter.writeLog("\n");
-//      logwriter.flush();
+      // Writer logwriter = Writer.getWriter("log");
+      // String classname = getClassName(path);
+      // logwriter.writeLog("[INFO]Magic Number of the Class \"" + classname +
+      // "\" Is " + new String(Integer.toHexString(magic)).toUpperCase());
+      // logwriter.writeLog("\n");
+      // logwriter.flush();
 
     }
 
@@ -1053,9 +1029,10 @@ public class ConsoleLauncher {
       major_version = dis.readUnsignedShort();
 
       class_file_format_version = major_version + (minor_version / 100);
-//      Writer logwriter = Writer.getWriter("log");
-//      logwriter.writeLog("[INFO]class Version is " + class_file_format_version + "\n\n");
-//      logwriter.flush();
+      // Writer logwriter = Writer.getWriter("log");
+      // logwriter.writeLog("[INFO]class Version is " +
+      // class_file_format_version + "\n\n");
+      // logwriter.flush();
 
     }
     catch (IOException ioe) {
@@ -1247,7 +1224,7 @@ public class ConsoleLauncher {
       handler.reportException();
       JFrame mainFrame = UILauncher.getMainFrame();
       if (mainFrame == null) {
-        //System.exit(1);
+        // System.exit(1);
       }
     }
     return CPool.returnConstantPoolDesc();
@@ -1313,7 +1290,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        //System.exit(1);
+        // System.exit(1);
       }
     }
   }
@@ -1335,11 +1312,10 @@ public class ConsoleLauncher {
    */
   static java.lang.String classDescdup = "";
 
-
   private static java.lang.String displayClass(boolean showMethodCode, java.lang.String typeofcodedisplay, String classname) {
     return displayClassAndZip(showMethodCode, typeofcodedisplay, classname, null);
   }
-  
+
   private static java.lang.String displayClassAndZip(boolean showMethodCode, java.lang.String typeofcodedisplay, String classname, ZipOutputStream zip) {
     StringBuffer temp = new StringBuffer();
     java.lang.String classDescCopy = "";
@@ -1557,28 +1533,28 @@ public class ConsoleLauncher {
         // {
         outputwriter.close("output");
         // }
-        if(zip != null) {
+        if (zip != null) {
           try {
-          byte[] buf = new byte[1024];
-          
-          FileInputStream in = new FileInputStream(outputwriter.getFile());
+            byte[] buf = new byte[1024];
 
-          // Add ZIP entry to output stream.
-          String fileName = outputwriter.getFile().getAbsolutePath().replaceAll("^.*src[0-9]+(/|\\\\)(.*)$", "$2");
-          zip.putNextEntry(new ZipEntry(fileName));
-          DecompileApplet.appendToLog("Created "+fileName);
+            FileInputStream in = new FileInputStream(outputwriter.getFile());
 
-          // Transfer bytes from the file to the ZIP file
-          int len;
-          while ((len = in.read(buf)) > 0) {
-            zip.write(buf, 0, len);
+            // Add ZIP entry to output stream.
+            String fileName = outputwriter.getFile().getAbsolutePath().replaceAll("^.*src[0-9]+(/|\\\\)(.*)$", "$2");
+            zip.putNextEntry(new ZipEntry(fileName));
+            DecompileApplet.appendToLog("Created " + fileName);
+
+            // Transfer bytes from the file to the ZIP file
+            int len;
+            while ((len = in.read(buf)) > 0) {
+              zip.write(buf, 0, len);
+            }
+
+            // Complete the entry
+            zip.closeEntry();
+            in.close();
           }
-
-          // Complete the entry
-          zip.closeEntry();
-          in.close();
-          }
-          catch(Exception e) {
+          catch (Exception e) {
             e.printStackTrace();
           }
         }
@@ -2211,7 +2187,7 @@ public class ConsoleLauncher {
       }
       else {
         System.out.println("Jdec encountered an FatalException. Jdec will now exit..");
-        //System.exit(1);
+        // System.exit(1);
       }
     }
 
@@ -2549,25 +2525,28 @@ public class ConsoleLauncher {
           String JarDir = Configuration.getTempDir();
           File f = new File(JarDir);
           if (f.exists() == false) {
-//            Writer w = Writer.getWriter("log");
-//            w.writeLog("Temp Dir Does Not Exist...");
-//            w.writeLog("Jdec will not create The Directory " + JarDir);
-//            w.flush();
-//            w.close();
+            // Writer w = Writer.getWriter("log");
+            // w.writeLog("Temp Dir Does Not Exist...");
+            // w.writeLog("Jdec will not create The Directory " + JarDir);
+            // w.flush();
+            // w.close();
             f.mkdirs();
           }
-          int slash = name.lastIndexOf("/");
+//          int slash = name.lastIndexOf("/");
           File tempFile = null;
-          if (slash != -1) {
-            tempFile = new File(JarDir + name.substring(slash));
-            tempFile.delete();
+//          if (slash != -1) {
+            tempFile = new File(JarDir + name);//.substring(slash));
+            if(tempFile.exists())
+              tempFile.delete();
+            else if(!tempFile.getParentFile().exists())
+              tempFile.getParentFile().mkdirs();
             fos = new FileOutputStream(tempFile);
-          }
-          else {
-            tempFile = new File(JarDir + File.separator + name);
-            tempFile.delete();
-            fos = new FileOutputStream(tempFile);
-          }
+//          }
+//          else {
+//            tempFile = new File(JarDir + File.separator + name);
+//            tempFile.delete();
+//            fos = new FileOutputStream(tempFile);
+//          }
           int i = is.read();
           while (i != -1) {
             fos.write(i);
@@ -3535,7 +3514,7 @@ public class ConsoleLauncher {
   }
 
   public static java.lang.String getLicenceWarning() {
-    java.lang.String mesg = "//  Decompiled by ap2cu\n" + "//  DECOMPILER HOME PAGE: http://ap2cu.com/tools/decompiler\n" ;
+    java.lang.String mesg = "//  Decompiled by ap2cu\n" + "//  DECOMPILER HOME PAGE: http://ap2cu.com/tools/decompiler\n";
     return mesg;
 
   }
@@ -3667,7 +3646,7 @@ public class ConsoleLauncher {
       handler.sendMessage();
       System.out.println("[ERROR] Please check the input settings to Jdec again");
       System.out.println("Please check the log output for more details");
-      //System.exit(1);
+      // System.exit(1);
     }
 
   }
