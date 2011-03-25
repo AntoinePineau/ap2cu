@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeightWatchers<sup>&#169;</sup> ProPoints<sup>&#174;</sup> Calculator</string>
+    <string name="food.label">Food</string>
+    <string name="food_p.label">Proteins</string>
+    <string name="food_l.label">Lipids</string>
+    <string name="food_f.label">Fiber</string>
+    <string name="food_g.label">Carbohydrates</string>
+    <string name="food_b.label">For</string>
+    <string name="food_q.label">Quantity</string>
+    <string name="activity.label">Activity</string>
+    <string name="activity_w.label">Weight</string>
+    <string name="activity_d.label">Duration</string>
+    <string name="activity_i.label">Intensity</string>
+    <string name="i.label">Integer</string>
+    <string name="grams.label">g</string>
+    <string name="kilograms.label">kg</string>
+    <string name="minutes.label">min</string>
+    <string name="points.label">points</string>
+    
+    <string-array name="menu_array">
+      <item>Food</item>
+      <item>Activity</item>
+    </string-array>
+    
+</resources>

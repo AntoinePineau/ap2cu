@@ -1,0 +1,9 @@
+<resources>
+
+  <string-array name="intensity">
+    <item>Baja</item>
+    <item>Moderada</item>
+    <item>Alta</item>
+  </string-array>
+
+</resources>

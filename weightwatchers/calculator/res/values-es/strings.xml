@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Calculadora WeightWatchers<sup>&#169;</sup> ProPoints<sup>&#174;</sup></string>
+    <string name="food.label">Alimentos</string>
+    <string name="food_p.label">Proteínas</string>
+    <string name="food_l.label">Lípidos</string>
+    <string name="food_f.label">Fibras</string>
+    <string name="food_g.label">Glúcidos</string>
+    <string name="food_b.label">Por</string>
+    <string name="food_q.label">Cantidad</string>
+    <string name="activity.label">Actividad</string>
+    <string name="activity_w.label">Peso</string>
+    <string name="activity_d.label">Duración</string>
+    <string name="activity_i.label">Intensidad</string>
+    <string name="i.label">Entero</string>
+    <string name="grams.label">g</string>
+    <string name="kilograms.label">kg</string>
+    <string name="minutes.label">min</string>
+    <string name="points.label">puntos</string>
+    
+    <string-array name="menu_array">
+      <item>Alimentos</item>
+      <item>Actividad</item>
+    </string-array>
+    
+</resources>
