@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Screen">    
+    
+<TextView android:id="@+id/foodLabel" style="@style/Title" android:text="@string/activity.label"></TextView>
+    
+<TableRow android:id="@+id/wRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/wLabel" style="@style/Label" android:text="@string/activity_w.label"></TextView>
+  <EditText android:id="@+id/wField" style="@style/Field" android:text=""></EditText>
+  <TextView android:id="@+id/kgLabel" style="@style/Label" android:text="@string/kilograms.label"></TextView>
+</TableRow>
+<TableRow android:id="@+id/dRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/dLabel" style="@style/Label" android:text="@string/activity_d.label"></TextView>
+  <EditText android:id="@+id/dField" style="@style/Field" android:text=""></EditText>
+  <TextView android:id="@+id/minutesLabel" style="@style/Label" android:text="@string/minutes.label"></TextView>
+</TableRow>
+<TableRow android:id="@+id/iRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/iLabel" style="@style/Label" android:text="@string/activity_i.label"></TextView>
+  <Spinner android:id="@+id/iSpinner" style="@style/Label" android:drawSelectorOnTop="true"></Spinner>
+</TableRow>
+<TableRow android:id="@+id/intRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/intLabel" android:text=""></TextView>
+  <CheckBox android:id="@+id/intField" style="@style/Check" android:text="@string/i.label" android:checked="true"></CheckBox>
+</TableRow>
+<TableRow android:id="@+id/resultRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/result" style="@style/Result" android:text="0"></TextView>
+  <TextView android:id="@+id/pointsLabel" style="@style/Result" android:text="@string/points.label"></TextView>
+</TableRow>
+
+</TableLayout>
